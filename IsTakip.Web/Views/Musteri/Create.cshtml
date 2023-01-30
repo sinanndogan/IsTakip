@@ -1,0 +1,75 @@
+﻿@model IsTakip.Core.Classes.MusteriClasses.Musteri
+
+<div class="row">
+  <div class="col-xxl-12">
+    <div class="card card-xxl-stretch mb-5 mb-xl-8">
+      <div class="card-header border-0 pt-5">
+        <div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover">
+          <span class="card-label fw-bolder fs-4 mb-2">Yeni Müşteri Kartı</span>
+        </div>
+      </div>
+      <div class="card-body py-3">
+        <form asp-action="Create">
+          <div class="row">
+            <div class="col-md-6">
+
+              <div class="mb-5">
+                <label asp-for="Tanim" class="form-label"></label> @*Nesneye bağlı bir label oluşturacaksak class a form-label attr. atıyoruz*@
+                <input asp-for="Tanim" class="form-control" />@*dışarıdan gelen bir veriye bağlı nesne oluşturacaksak class a form-control attr. atıyoruz*@
+                <span asp-validation-for="Tanim" class="text-danger"></span>@*nesnenin altına oluşturduğumuz text alanı sadece o nesneye atanan errorValidation.Message verisini getirir.*@
+              </div>
+
+              <div class="mb-5">
+                <label asp-for="MusteriSinifId" class="form-label"></label>
+                <select asp-for="MusteriSinifId" class="form-control" asp-items="ViewBag.MusteriSinif">
+                  <option value="">Seçiniz</option>
+                </select>
+                <span asp-validation-for="MusteriSinifId" class="text-danger"></span>
+              </div>
+
+              <div class="mb-5">
+                <label asp-for="VergiDairesi" class="form-label"></label>
+                <input asp-for="VergiDairesi" class="form-control" />
+                <span asp-validation-for="VergiDairesi" class="text-danger"></span>
+              </div>
+
+              <div class="mb-5">
+                <label asp-for="VergiNumarasi" class="form-label"></label>
+                <input asp-for="VergiNumarasi" class="form-control" />
+                <span asp-validation-for="VergiNumarasi" class="text-danger"></span>
+              </div>
+
+              <div class="mb-5">
+                <label class="form-label">
+                  <input asp-for="Aktif" class="form-check-input" checked="" />
+                  @Html.DisplayNameFor(model=>model.Aktif)
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6">
+
+              <div class="mb-5">
+                <label asp-for="TelefonNumarasi" class="form-label"></label>
+                <input asp-for="TelefonNumarasi" class="form-control" />
+                <span asp-validation-for="TelefonNumarasi" class="text-danger"></span>
+              </div>
+              <div class="mb-5">
+                <label asp-for="Adres" class="form-label"></label>
+                <input asp-for="Adres" class="form-control" />
+                <span asp-validation-for="Adres" class="text-danger"></span>
+              </div>
+              <div class="mb-5">
+                <label asp-for="Aciklama" class="form-label"></label>
+                <input asp-for="Aciklama" class="form-control" />
+                <span asp-validation-for="Aciklama" class="text-danger"></span>
+              </div>
+            </div>
+
+          </div>
+          <a class="btn btn-secondary mr-2" asp-action="Index"><i class="fa fa-arrow-left"></i> Listeye Geri Dön</a>
+          <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Kaydet</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

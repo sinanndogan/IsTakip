@@ -1,0 +1,44 @@
+﻿@model IsTakip.Core.Classes.MalzemeTipClasses.MalzemeTip
+
+@{
+    ViewData["Title"] = "Malzeme Tip Detay";
+}
+
+<div class="row">
+	<div class="col-xxl-12">
+		<!--begin::Tables Widget 9-->
+		<div class="card card-xxl-stretch mb-5 mb-xl-8">
+			<!--begin::Header-->
+			<div class="card-header border-0 pt-5">
+				<h3 class="card-title align-items-start flex-column">
+					<span class="card-label fw-bolder fs-3 mb-1">Malzeme Tip Detay</span>
+				</h3>
+			</div>
+			<!--end::Header-->
+			<!--begin::Body-->
+			<div class="card-body">
+				<!--begin::Table container-->
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+				<div class="mb-5">
+					<label asp-for="Tanim" class="form-label"></label>
+					<input asp-for="Tanim" disabled class="form-control" />
+					<span asp-validation-for="Tanim" class="text-danger"></span>
+				</div>
+				<div class="mb-5">
+					<label asp-for="Aciklama" class="form-label"></label>
+					<input asp-for="Aciklama" disabled class="form-control" />
+					<span asp-validation-for="Aciklama" class="text-danger"></span>
+				</div>
+				<div class="mb-10 form-check">
+					<label class="form-label">
+						<input class="form-check-input" disabled asp-for="Aktif" /> @Html.DisplayNameFor(model => model.Aktif)
+					</label>
+				</div>
+				<a class="btn btn-secondary mr-2" asp-action="Index"><i class="fa fa-arrow-left"></i> Listeye Geri Dön</a>
+				<!--end::Table container-->
+			</div>
+			<!--begin::Body-->
+		</div>
+		<!--end::Tables Widget 9-->
+	</div>
+</div>

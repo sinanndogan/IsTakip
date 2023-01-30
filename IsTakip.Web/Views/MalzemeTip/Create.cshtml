@@ -1,0 +1,36 @@
+﻿@model IsTakip.Core.Classes.MalzemeTipClasses.MalzemeTip
+@{
+	ViewData["Title"] = "Yeni Malzeme Tip";
+}
+<div class="row">
+	<div class="col-xxl-12">
+		<div class="card card-xxl-stretch mb-5 mb-xl-8">
+			<div class="card-header border-0 pt-5">
+				<h3 class="card-title align-items-start flex-column">
+					<span class="card-label fw-bolder fs-3 mb-1">Yeni Malzeme Tip</span>
+				</h3>
+			</div>
+			<div class="card-body">
+				<form asp-action="Create">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<div class="mb-12">
+						<label asp-for="Tanim" class="form-label"></label>
+						<input asp-for="Tanim" class="form-control" />
+						<span asp-validation-for="Tanim" class="text-danger"></span>
+					</div>
+					<div class="mb-12">
+						<label asp-for="Aciklama" class="form-label"></label>
+						<input asp-for="Aciklama" class="form-control" />
+						<span asp-validation-for="Aciklama" class="text-danger"></span>
+					</div>
+					<div class="mb-12 form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" asp-for="Aktif" checked /> @Html.DisplayNameFor(model => model.Aktif)
+						</label>
+					</div>
+					<a class="btn btn-secondary mr-2" asp-action="Index"><i class="fa fa-arrow-left"></i> Listeye Geri Dön</a>  <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Kaydet</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

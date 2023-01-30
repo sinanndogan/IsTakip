@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsTakip.Core", "IsTakip.Core\IsTakip.Core.csproj", "{1BBAEF58-45D7-4CB5-AE42-F96011CAAD65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsTakip.Web", "IsTakip.Web\IsTakip.Web.csproj", "{293DCC3C-B74B-4131-B336-90C7296947B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BBAEF58-45D7-4CB5-AE42-F96011CAAD65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBAEF58-45D7-4CB5-AE42-F96011CAAD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBAEF58-45D7-4CB5-AE42-F96011CAAD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBAEF58-45D7-4CB5-AE42-F96011CAAD65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{293DCC3C-B74B-4131-B336-90C7296947B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293DCC3C-B74B-4131-B336-90C7296947B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293DCC3C-B74B-4131-B336-90C7296947B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293DCC3C-B74B-4131-B336-90C7296947B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C5EB673-B7C2-4C2B-8FAB-5AE3E89D98C3}
+	EndGlobalSection
+EndGlobal
